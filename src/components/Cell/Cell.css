@@ -1,0 +1,32 @@
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  background-color: #c0c0c0;
+}
+
+.cell.revealed {
+  background-color: #e0e0e0;
+}
+
+.cell.safe {
+  border: 2px solid green;
+}
+
+.cell.risky {
+  border: 2px solid orange;
+}
+
+.cell.danger {
+  border: 2px solid red;
+}
+
+.cell.safe{
+    border: 2px solid green;
+}
