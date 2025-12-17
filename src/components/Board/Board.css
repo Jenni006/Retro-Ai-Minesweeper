@@ -1,6 +1,132 @@
+/* Import Win95 theme */
+@import '../../styles/win95.css';
+
+.game-board-container {
+  background-color: var(--win95-bg);
+  padding: 8px;
+  border: 2px outset var(--win95-bg);
+  display: inline-block;
+}
+
+.game-controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 4px;
+  background-color: var(--win95-bg);
+  border: 2px inset var(--win95-bg);
+  gap: 8px;
+}
+
+.game-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--win95-bg);
+  border: 2px inset var(--win95-bg);
+  cursor: pointer;
+}
+
+.game-status:active {
+  border: 2px outset var(--win95-bg);
+}
+
+.minesweeper-board {
+  display: grid;
+  gap: 0;
+  border: 3px inset var(--win95-bg);
+  padding: 4px;
+  background-color: var(--win95-bg);
+}
+
+.game-message {
+  margin-top: 8px;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--win95-bg);
+  border: 2px outset var(--win95-bg);
+}
+
+/* Legacy board styles for backward compatibility */
 .board {
   display: grid;
-  grid-template-columns: repeat(8, 40px);
-  grid-gap: 2px;
-  margin-top: 20px;
+  gap: 0;
+  background-color: var(--win95-bg);
+  padding: 4px;
+  border: 3px inset var(--win95-bg);
+  margin: 8px;
+  justify-content: center;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--win95-bg);
+}
+
+.ai-explanation {
+  background-color: var(--win95-bg);
+  border: 2px inset var(--win95-bg);
+  padding: 8px;
+  margin-bottom: 8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 11px;
+  color: var(--win95-text);
+}
+
+.ai-explanation p {
+  margin: 4px 0;
+}
+
+.game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(192, 192, 192, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.game-over-overlay h1 {
+  color: var(--win95-text);
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+
+.game-over-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.game-over-buttons button {
+  padding: 8px 16px;
+  font-size: 11px;
+  background-color: var(--win95-bg);
+  color: var(--win95-text);
+  border: 2px outset var(--win95-bg);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.game-over-buttons button:hover {
+  background-color: var(--win95-light);
+}
+
+.game-over-buttons button:active {
+  border: 2px inset var(--win95-bg);
 }

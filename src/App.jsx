@@ -1,12 +1,12 @@
-import React from "react";
-import Board from "./components/Board/Board";
-import "./App.css";
+import React from 'react';
+import { Game } from './components/Game/Game';
+import './styles/win95.css';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>💣 Retro AI Minesweeper</h1>
-      <Board />
+    <div className="app">
+      <Game />
     </div>
   );
 }

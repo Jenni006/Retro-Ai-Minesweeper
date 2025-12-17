@@ -1,32 +1,21 @@
-.cell {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #888;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-  cursor: pointer;
-  background-color: #c0c0c0;
+/* Import Win95 theme */
+@import '../../styles/win95.css';
+
+/* Cell-specific styles that extend the base minesweeper-cell class */
+.minesweeper-cell {
+  /* Base styles are defined in win95.css */
 }
 
-.cell.revealed {
-  background-color: #e0e0e0;
+/* Additional cell-specific hover effects */
+.minesweeper-cell:not(.revealed):not(.flagged):hover {
+  background-color: var(--win95-light);
+  border-color: var(--win95-light);
 }
 
-.cell.safe {
-  border: 2px solid green;
-}
-
-.cell.risky {
-  border: 2px solid orange;
-}
-
-.cell.danger {
-  border: 2px solid red;
-}
-
-.cell.safe{
-    border: 2px solid green;
+/* Ensure proper sizing for the grid */
+.minesweeper-cell {
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
 }

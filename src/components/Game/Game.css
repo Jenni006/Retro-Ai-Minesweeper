@@ -1,0 +1,114 @@
+/* Import Win95 theme */
+@import '../../styles/win95.css';
+
+.minesweeper-game {
+  background-color: var(--win95-bg);
+  border: 2px outset var(--win95-bg);
+  padding: 8px;
+  margin: 20px auto;
+  display: inline-block;
+  font-family: 'MS Sans Serif', sans-serif;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: var(--win95-bg);
+  border: 2px inset var(--win95-bg);
+}
+
+.game-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--win95-text);
+  margin: 0;
+}
+
+.difficulty-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--win95-text);
+}
+
+.difficulty-selector label {
+  font-weight: normal;
+}
+
+.win95-select {
+  background-color: white;
+  border: 2px inset var(--win95-bg);
+  padding: 2px 4px;
+  font-family: inherit;
+  font-size: 11px;
+  color: var(--win95-text);
+}
+
+.win95-select:focus {
+  outline: 1px dotted var(--win95-text);
+  outline-offset: -2px;
+}
+
+.game-footer {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: var(--win95-bg);
+  border: 2px inset var(--win95-bg);
+}
+
+.stats-summary {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  font-size: 11px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-label {
+  color: var(--win95-text);
+  font-weight: normal;
+  margin-bottom: 2px;
+}
+
+.stat-value {
+  color: var(--win95-text);
+  font-weight: bold;
+  background-color: var(--win95-bg);
+  border: 1px inset var(--win95-bg);
+  padding: 2px 6px;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  
+  .difficulty-selector {
+    justify-content: center;
+  }
+  
+  .stats-summary {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .stat-item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

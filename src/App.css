@@ -1,26 +1,81 @@
-.App {
-  text-align: center;
-  font-family: "Courier New", monospace;
-  background-color: #f0f0f0;
+/* Import Win95 theme */
+@import './styles/win95.css';
+
+.app {
   min-height: 100vh;
+  background-color: var(--win95-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  font-family: 'MS Sans Serif', sans-serif;
 }
 
-h1 {
-  color: #333;
-  margin-bottom: 20px;
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--win95-bg);
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  color: var(--win95-text);
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure proper button styling throughout the app */
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Remove default focus outlines and add Win95-style focus */
+button:focus,
+select:focus {
+  outline: 1px dotted var(--win95-text);
+  outline-offset: -2px;
+}
+
+/* Legacy styles for backward compatibility */
+.App {
+  font-family: 'MS Sans Serif', sans-serif;
+  background-color: var(--win95-bg);
+  color: var(--win95-text);
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
   text-align: center;
 }
 
-/* For AI hint explanations */
-.ai-explanation {
-  margin-top: 15px;
-  font-size: 16px;
-  color: #555;
+h1, h2 {
+  color: var(--win95-text);
+  font-family: inherit;
+  text-shadow: none;
 }
+
+.ai-explanation {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--win95-text);
+  background-color: var(--win95-bg);
+  padding: 8px;
+  border: 2px inset var(--win95-bg);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+

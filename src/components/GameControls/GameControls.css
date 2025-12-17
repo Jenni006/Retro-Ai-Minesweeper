@@ -1,0 +1,95 @@
+/* Import Win95 theme */
+@import '../../styles/win95.css';
+
+.game-controls {
+  background-color: var(--win95-bg);
+  border: 2px outset var(--win95-bg);
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.controls-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 4px;
+  background-color: var(--win95-bg);
+  border: 2px inset var(--win95-bg);
+}
+
+.controls-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.mine-counter,
+.timer-display {
+  background-color: #000;
+  color: #ff0000;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border: 2px inset var(--win95-bg);
+  min-width: 48px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.smiley-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: var(--win95-bg);
+  border: 2px outset var(--win95-bg);
+}
+
+.smiley-button:active {
+  border: 2px inset var(--win95-bg);
+}
+
+.smiley-icon::before {
+  content: '🙂';
+}
+
+.smiley-icon.won::before {
+  content: '😎';
+}
+
+.smiley-icon.lost::before {
+  content: '😵';
+}
+
+.stats-display {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--win95-text);
+}
+
+.hint-counter {
+  padding: 2px 4px;
+  background-color: var(--win95-bg);
+  border: 1px inset var(--win95-bg);
+}
+
+/* Button hover effects */
+.win95-button:hover:not(:disabled) {
+  background-color: var(--win95-light);
+}
+
+.win95-button:disabled {
+  color: var(--win95-dark);
+  cursor: not-allowed;
+}
+
+.win95-button:disabled:hover {
+  background-color: var(--win95-bg);
+}
